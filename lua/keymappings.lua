@@ -14,10 +14,16 @@ local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('', '<Leader>d', '"_d', opts)
 
 -- shift the movement keys by 0 to the right
-vim.api.nvim_set_keymap('', 'j', 'h', opts)
-vim.api.nvim_set_keymap('', 'k', 'j', opts)
-vim.api.nvim_set_keymap('', 'l', 'k', opts)
-vim.api.nvim_set_keymap('', 'č', 'l', opts)
+vim.api.nvim_set_keymap('', 'u', 'k', opts)
+vim.api.nvim_set_keymap('', 'e', 'j', opts)
+vim.api.nvim_set_keymap('', 'i', 'h', opts)
+vim.api.nvim_set_keymap('', 'n', 'l', opts)
+
+vim.api.nvim_set_keymap('', 'k', 'i', opts)
+-- 
+vim.api.nvim_set_keymap('', 'Q', ':wq<CR>', opts)
+vim.api.nvim_set_keymap('', 'S', ':w<CR>', opts)
+vim.api.nvim_set_keymap('', 'tt', ':NvimTreeToggle<CR>', opts)
 
 -- mapping ESC to ć
 vim.api.nvim_set_keymap('n', 'ć', '<Esc>', opts)
@@ -31,10 +37,10 @@ vim.api.nvim_set_keymap('i', 'ć', '<Esc>l', opts)
 vim.api.nvim_set_keymap('i', 'Ć', '<Esc>l', opts)
 
 -- fast scrolling
-vim.api.nvim_set_keymap('n', 'K', '9j', opts)
-vim.api.nvim_set_keymap('n', 'L', '9k', opts)
-vim.api.nvim_set_keymap('v', 'K', '9j', opts)
-vim.api.nvim_set_keymap('v', 'L', '9k', opts)
+vim.api.nvim_set_keymap('n', 'E', '9j', opts)
+vim.api.nvim_set_keymap('n', 'U', '9k', opts)
+vim.api.nvim_set_keymap('v', 'E', '9j', opts)
+vim.api.nvim_set_keymap('v', 'U', '9k', opts)
 
 -- stay in normal mode after inserting a new line
 vim.api.nvim_set_keymap('', 'o', 'o <Bs><Esc>', opts)
@@ -47,7 +53,7 @@ vim.api.nvim_set_keymap('n', '<Leader>ev', '<Cmd>tabe $MYVIMRC<CR>', opts)
 -- vim.api.nvim_set_keymap('n', '<Leader>sv', '<Cmd>lua dofile(vim.fn.stdpath(\'config\')..\'/init.lua\')<CR>', { noremap = true, silent = false })
 
 -- Mapping U to Redo.
-vim.api.nvim_set_keymap('', 'U', '<C-r>', opts)
+vim.api.nvim_set_keymap('', 'l', '<C-r>', opts)
 vim.api.nvim_set_keymap('', '<C-r>', '<NOP>', opts)
 
 -- indent via Tab

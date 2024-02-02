@@ -10,7 +10,7 @@ end
 
 local packer = require('packer').startup(function(use)
   -- Packer should manage itself
-  use 'wbthomason/packer.nvim'
+  -- use 'wbthomason/packer.nvim'
 
   -- colorscheme
   use 'drewtempelmeyer/palenight.vim'
@@ -37,8 +37,8 @@ local packer = require('packer').startup(function(use)
 
   -- lsp config
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+    -- "williamboman/mason.nvim",
+    -- "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
 
@@ -97,7 +97,7 @@ local packer = require('packer').startup(function(use)
 end)
 
 -- plugin specific configs go here
-require('plugin-config/mason')
+-- require('plugin-config/mason')
 require('plugin-config/nvim-cmp')
 require('plugin-config/telescope')
 require('plugin-config/nvim-tree')
