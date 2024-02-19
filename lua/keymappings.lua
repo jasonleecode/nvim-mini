@@ -2,16 +2,16 @@
 local opts = { noremap = true, silent = true }
 -- TODO: disabled since trying out "clipboard = unnamedplus" option
 -- copy
---vim.api.nvim_set_keymap('', '<C-c>', '"+y', opts)
+vim.api.nvim_set_keymap('', '<C-c>', '"+y', opts)
 -- paste
---vim.api.nvim_set_keymap('', '<C-v>', '"+p', opts)
+vim.api.nvim_set_keymap('', '<C-v>', '"+p', opts)
 -- cut
---vim.api.nvim_set_keymap('', '<C-x>', '"+d', opts)
+vim.api.nvim_set_keymap('', '<C-x>', '"+d', opts)
 -- paste in insert mode
---vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>"+pa', opts)
+vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>"+pa', opts)
 
 -- delete without copy
-vim.api.nvim_set_keymap('', '<Leader>d', '"_d', opts)
+vim.api.nvim_set_keymap('', '<Leader>d', '"d', opts)
 
 -- shift the movement keys by 0 to the right
 vim.api.nvim_set_keymap('', 'u', 'k', opts)
